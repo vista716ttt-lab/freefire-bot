@@ -1,0 +1,9 @@
+services:
+  freefire_teammate_bot:
+    build: .
+    container_name: freefire_teammate_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
